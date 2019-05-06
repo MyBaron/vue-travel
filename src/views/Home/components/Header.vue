@@ -7,23 +7,27 @@
       <span class="iconfont">&#xe632;</span>
       输入景点/城市/游玩主题
     </div>
-    <div class="header-right">
-      城市
-      <span class="iconfont arrow-icon">&#xe64a;</span>
-    </div>
+    <router-link to="/City">
+      <div class="header-right">
+        {{this.city}}
+        <span class="iconfont arrow-icon">&#xe64a;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
 
 <script>
 export default {
-  name: "HomeHeader"
+  name: "HomeHeader",
+  props: ["city"]
 };
 </script>
 
 
 <style lang="stylus" scoped>
-@import "~@/assets/veribles.styl";
+@import '~@/assets/veribles.styl';
+
 .header {
   display: flex;
   line-height: 1.96rem;
@@ -58,6 +62,7 @@ export default {
   width: 5.12rem;
   float: right;
   text-align: center;
+  color: #fff;
 
   .arrow-icon {
     margin-left: -0.2rem;

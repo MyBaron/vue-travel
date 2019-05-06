@@ -27,31 +27,19 @@ export default {
           disableOnInteraction: true
         },
         loop: true
-      },
-      swiperList: [
-        {
-          id: "001",
-          imgUrl:
-            "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5daa78ddf9a3e3aca32195e079b9545d.jpg_750x200_3aeaa5c2.jpg"
-        },
-        {
-          id: "002",
-          imgUrl:
-            "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/2680ea76118c1fc8f5d44b4240c20275.jpg_750x200_42900395.jpg"
-        }
-      ]
+      }
     };
-  }
+  },
+  props: ["swiperList"]
 };
 </script>
 <style lang="stylus" scoped>
-
 // 修改子模块的样式
 .wrapper >>> .swiper-pagination-bullet-active {
   background: #fff;
 }
+
 .wrapper {
-    // 撑起照片的高度
   overflow: hidden;
   width: 100%;
   height: 0;
